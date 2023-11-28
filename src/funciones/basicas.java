@@ -1,9 +1,9 @@
-package funciones;
+package Funciones;
 
 import java.util.Scanner;
 
 
-public class basicas {
+public class Basicas {
     public static Scanner sc = new Scanner(System.in);
 
 
@@ -46,5 +46,38 @@ public class basicas {
         caracter = imput.charAt(0);
 
         return caracter;
+    }
+
+    public static int PideYScaneaintPositivo(String Mensaje) {// muestra por pantalla un mensaje y devuelve el input del usuario
+        // (un numero)
+        int numero = -1;
+        System.out.println(Mensaje);
+        
+        while (numero < 0) {
+
+            while (!sc.hasNextInt()) {
+                
+                System.out.println("        *********");
+                System.out.println("        * ERROR *");
+                System.out.println("***************************");
+                System.out.println("* el input no es correcto *");
+                System.out.println("***************************");
+                System.out.println("\n" + Mensaje);
+                sc.nextLine();
+            }
+            numero = sc.nextInt();
+
+            
+            System.out.println("        *********");
+            System.out.println("        * ERROR *");
+            System.out.println("***************************");
+            System.out.println("* el input no es correcto *");
+            System.out.println("***************************");
+            System.out.println("\n" + Mensaje);
+            sc.nextLine();
+        }
+        
+        
+        return numero;
     }
 }

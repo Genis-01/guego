@@ -1,13 +1,7 @@
 package Personajes;
 
-
-
-public class Genis {
-    public static final int idPersonaje= 1;
+public class Julen {
+    public static final int idPersonaje= 2;
     public static final int vida = 10;
     public static int energia = 12;
-    
-    
-
-   
 }
